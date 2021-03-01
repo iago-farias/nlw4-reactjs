@@ -1,0 +1,34 @@
+.sidebarContainer{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.05));
+}
+
+.logoContainer {
+  margin: 1.5rem 2rem;
+}
+
+.buttonsContainer{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonsContainer button {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1.25rem;
+  font-size: 0;
+  padding: 0.75rem;
+}
+
+.buttonsContainer .selectedPage {
+  border-left: 4px solid var(--blue);
+  border-radius: 2px;
+}
