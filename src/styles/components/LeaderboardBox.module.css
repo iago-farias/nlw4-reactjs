@@ -1,0 +1,64 @@
+.leaderboardContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.positionContainer {
+  background-color: var(--white);
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 2rem;
+  padding: 2rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.userInformation {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  margin-left: 0.3rem;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.profileInformation {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.profileInformation > img{
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.profileInformation .userName {
+  color: var(--title);
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+
+.profileInformation > div {
+  margin-left: 1rem;
+}
+
+.profileInformation .userLevel img{
+  margin-right: 0.5rem;
+}
+
+.achievementsInformation strong{
+  color: var(--blue);
+}
+
+.achievementsInformation span {
+  color: var(--text);
+  margin-right: 2rem;
+}

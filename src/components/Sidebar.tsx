@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import Link from 'next/link';
+import {useRouter} from 'next/router';
 import styles from '../styles/components/Sidebar.module.css';
 
 export function Sidebar(){
-  const [selectedPage, setSelectedPage] = useState('home');
+  const route = useRouter();
 
   return(
     <div className={styles.sidebarContainer}>
@@ -11,19 +12,39 @@ export function Sidebar(){
       </div>
 
       <div className={styles.buttonsContainer}>
-        <button 
-          type="button"
-          className={selectedPage==='home' && styles.selectedPage}
-        >
-          <img src="/icons/home.svg" alt="Home icon"/>
-        </button>
-
-        <button 
-          type="button"
-          className={selectedPage==='leaderboard' && styles.selectedPage}
-        >
-          <img src="/icons/award.svg" alt="Award icon"/>
-        </button>
+        <Link href="/">
+          <button 
+            type="button"
+            className={
+              route.pathname === '/' 
+              ? styles.selectedPage
+              : undefined
+          }
+          >
+            {
+               route.pathname === '/'
+               ? <img src="/icons/home-blue.svg" alt="Home icon"/>
+               : <img src="/icons/home-gray.svg" alt="Home icon"/>
+            }
+          </button>
+        </Link>
+        
+        <Link href="/leaderboard">
+          <button 
+            type="button"
+            className={
+              route.pathname === '/leaderboard' 
+              ? styles.selectedPage 
+              : undefined
+            }
+          >
+            {
+              route.pathname === '/leaderboard'
+              ? <img src="/icons/award-blue.svg" alt="Award icon"/>
+              : <img src="/icons/award-gray.svg" alt="Award icon"/>
+            }
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -58,6 +58,8 @@ export function Countdown(){
                   onClick={startCountDown}
                 >
                   Iniciar um ciclo
+                  
+                  <img src="/icons/play-arrow.svg" alt="Play"/>
                 </button>
               )
 
